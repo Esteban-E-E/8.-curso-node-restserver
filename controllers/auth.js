@@ -1,7 +1,7 @@
 const { response } = require("express");
 const Usuario = require('../models/usuario');
 const bcryptjs = require('bcryptjs');
-const { generarJWT } = require("../helpers/generarJWT");
+const { generarJWT } = require("../helpers/generarjwt");
 
 // este controlador va en el ../routes/auth/Ln 6, Col 23
 const login = async(req, res = response) => {
