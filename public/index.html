@@ -30,6 +30,8 @@
 
     <script>
 
+        console.log(window.location.hostname.includes('localhost'));
+
         var url = ( window.location.hostname.includes('localhost'))
             ? 'http://localhost:4001/api/auth/google'
             : 'https://restserver-node-stv.herokuapp.com/api/auth/google'
@@ -50,6 +52,7 @@
             .then( resp => {
                 console.log(resp);
                 localStorage.setItem( 'email', resp.usuario.email )
+                location.reload()
             })
             .catch(console.warm);
 
